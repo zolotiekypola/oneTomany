@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.sapteh.Controllers.OverviewController">
+   <children>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="user">
+               <content>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="208.0">
+                           <children>
+                              <TableView fx:id="tableUser" layoutX="120.0" layoutY="73.0" prefHeight="371.0" prefWidth="440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="columnLastName" minWidth="-1.0" prefWidth="75.0" text="lastName" />
+                                    <TableColumn fx:id="columnFirstName" minWidth="-1.0" prefWidth="75.0" text="firstName" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="fxButtonNewUser" layoutX="169.0" layoutY="332.0" mnemonicParsing="false" text="NewUser" />
+                              <Button fx:id="fxButtonEditUser" layoutX="77.0" layoutY="332.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="41.0" text="Edit" />
+                              <Button fx:id="fxButtonDelete" layoutX="118.0" layoutY="332.0" mnemonicParsing="false" text="Delete" />
+                              <Button fx:id="fxButtonGiveRole" layoutX="14.0" layoutY="332.0" mnemonicParsing="false" text="GiveRole" />
+                              <GridPane layoutY="41.0" prefHeight="97.0" prefWidth="298.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="id" />
+                                    <Label text="firstName" GridPane.rowIndex="1" />
+                                    <Label text="LastName" GridPane.rowIndex="2" />
+                                    <Label text="Count" GridPane.rowIndex="3" />
+                                    <Label prefHeight="0.0" prefWidth="89.0" text="RegistrationDate" GridPane.rowIndex="4" />
+                                    <Label fx:id="LabelID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="LabelFirstName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label fx:id="LabelLastName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label fx:id="LabelCount" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label fx:id="LabelRegistrarionDate" GridPane.columnIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+          <Tab text="role">
+               <content>
+                  <SplitPane dividerPositions="0.7" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="tableViewRole" layoutX="99.0" layoutY="86.0" prefHeight="371.0" prefWidth="417.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="columnIdRole" prefWidth="75.0" text="id" />
+                                  <TableColumn fx:id="columnNameRole" prefWidth="75.0" text="name" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="fxButtonEditRole" layoutX="34.0" layoutY="345.0" mnemonicParsing="false" text="Edit" />
+                              <Button fx:id="fxButtonDeleteRole" layoutX="71.0" layoutY="345.0" mnemonicParsing="false" text="Delete" />
+                              <Button fx:id="fxButtonNewRole" layoutX="-6.0" layoutY="345.0" mnemonicParsing="false" text="New" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </content></Tab>
+            <Tab text="userRole">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.540133779264214" layoutX="176.0" layoutY="106.0" prefHeight="371.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView fx:id="tableViewUr" layoutX="67.0" layoutY="62.0" prefHeight="369.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="columnIdUr" prefWidth="75.0" text="id" />
+                                        <TableColumn fx:id="columnRegDateUr" prefWidth="108.0" text="registrationDate" />
+                                          <TableColumn fx:id="columnRoleIdUr" prefWidth="75.0" text="RoleID" />
+                                          <TableColumn fx:id="columnUserIdUr" prefWidth="75.0" text="UserID" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Button fx:id="buttonNewUr" layoutY="343.0" mnemonicParsing="false" text="New" />
+                                    <Button fx:id="buttonEditUr" layoutX="40.0" layoutY="343.0" mnemonicParsing="false" text="Edit" />
+                                    <Button fx:id="buttonDeleteUr" layoutX="77.0" layoutY="343.0" mnemonicParsing="false" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
